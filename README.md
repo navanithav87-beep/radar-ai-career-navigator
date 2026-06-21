@@ -1,4 +1,4 @@
-# Radar AI Career Navigator 🚀
+# Radar AI - AI-Powered Career Growth Navigator
 
 ![Radar AI Dashboard Screenshot](dashboard_live_preview.png)
 
