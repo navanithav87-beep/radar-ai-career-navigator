@@ -1,6 +1,6 @@
 # Radar AI Career Navigator 🚀
 
-![Radar AI Dashboard Screenshot](dashboard_screenshot.png)
+![Radar AI Dashboard Screenshot](dashboard_live_preview.png)
 
 An autonomous, data-driven career strategist and opportunity tracker designed to maximize long-term career growth, learning potential, income, and professional visibility. 
 
