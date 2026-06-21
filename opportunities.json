@@ -1,0 +1,82 @@
+[
+  {
+    "id": "OPP-001",
+    "title": "Django + ML Model API Integration & Frontend UI",
+    "type": "Portfolio Project",
+    "description": "Expose the SVM Fruit Classifier via a Django REST Framework (DRF) or FastAPI endpoint, and build a beautiful, responsive, modern web interface for users to upload fruit images and see instant classifications with confidence metrics.",
+    "roi_metrics": {
+      "skill_development": 9.5,
+      "career_impact": 9.0,
+      "networking_value": 6.0,
+      "financial_benefit": 8.0,
+      "difficulty": 6.0,
+      "time_required_hours": 20
+    },
+    "score": 8.8,
+    "status": "Recommended"
+  },
+  {
+    "id": "OPP-002",
+    "title": "Microsoft Certified: Azure AI Engineer Associate (AI-102)",
+    "type": "Certification",
+    "description": "Gain the industry-standard certification for building and deploying AI solutions (Azure OpenAI, cognitive services, and AI agents) on Microsoft Azure.",
+    "roi_metrics": {
+      "skill_development": 8.5,
+      "career_impact": 8.5,
+      "networking_value": 7.0,
+      "financial_benefit": 8.5,
+      "difficulty": 7.5,
+      "time_required_hours": 60
+    },
+    "score": 8.1,
+    "status": "Recommended"
+  },
+  {
+    "id": "OPP-003",
+    "title": "AI & Web App Integration Hackathon (HackerEarth / Devpost)",
+    "type": "Hackathon",
+    "description": "Participate in a team-based hackathon focused on building intelligent web applications. Promotes networking, rapid prototyping, and high-visibility portfolio items.",
+    "roi_metrics": {
+      "skill_development": 9.0,
+      "career_impact": 8.5,
+      "networking_value": 9.0,
+      "financial_benefit": 7.0,
+      "difficulty": 8.0,
+      "time_required_hours": 36
+    },
+    "score": 8.0,
+    "status": "Recommended"
+  },
+  {
+    "id": "OPP-004",
+    "title": "Google Cloud Professional Machine Learning Engineer",
+    "type": "Certification",
+    "description": "Validate professional capabilities to build, train, deploy, and monitor machine learning models at scale using Vertex AI on GCP.",
+    "roi_metrics": {
+      "skill_development": 9.0,
+      "career_impact": 9.0,
+      "networking_value": 7.5,
+      "financial_benefit": 9.0,
+      "difficulty": 8.5,
+      "time_required_hours": 80
+    },
+    "score": 7.9,
+    "status": "Target"
+  },
+  {
+    "id": "OPP-005",
+    "title": "PCAP: Certified Associate in Python Programming",
+    "type": "Certification",
+    "description": "Obtain foundational credentials from the Python Institute validating intermediate Python concepts, OOP, and standard libraries.",
+    "roi_metrics": {
+      "skill_development": 6.5,
+      "career_impact": 6.0,
+      "networking_value": 5.0,
+      "financial_benefit": 6.0,
+      "difficulty": 5.0,
+      "time_required_hours": 30
+    },
+    "score": 6.1,
+    "status": "Optional"
+  }
+]

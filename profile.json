@@ -1,0 +1,44 @@
+{
+  "user_name": "Navanitha",
+  "current_role": "Python & Django Developer / Emerging ML Engineer",
+  "education": {
+    "status": "Student / Aspiring Professional",
+    "focus": "Computer Science / Software Engineering"
+  },
+  "skills": {
+    "languages": ["Python", "SQL"],
+    "backend_frameworks": ["Django"],
+    "machine_learning": ["scikit-learn", "scikit-image (HOG)", "PIL (Pillow)", "Support Vector Machines (SVM)", "Data Preprocessing", "Feature Extraction"],
+    "databases": ["SQLite"],
+    "tools": ["Git", "Pip", "Dotenv"]
+  },
+  "projects": [
+    {
+      "name": "Image Classification Fruit",
+      "type": "Django & Machine Learning",
+      "description": "An image classifier Django application utilizing HOG feature extraction and an SVM model to classify fruit images. Includes train.py for training models, preprocessing, and pickling labelers, scalers, and models.",
+      "technologies": ["Django", "Python", "scikit-learn", "scikit-image", "PIL", "Pickle"]
+    },
+    {
+      "name": "Personal Money Transaction Tracker",
+      "type": "Django Web Application",
+      "description": "A database-driven money transaction tracking application with full CRUD capabilities.",
+      "technologies": ["Django", "Python", "SQL", "SQLite"]
+    },
+    {
+      "name": "User Management / Organization CRUD Projects",
+      "type": "Django Web Applications",
+      "description": "Django-based applications handling user and organization CRUD flows, using .env for environment configurations.",
+      "technologies": ["Django", "Python", "SQLite", "django-environ"]
+    }
+  ],
+  "career_goals": {
+    "primary": "Full-Stack AI Developer / MLOps Engineer",
+    "long_term": "Build scalable, production-grade web systems powered by AI/ML models.",
+    "immediate_milestones": [
+      "Bridge the gap between ML model training and backend API deployment (e.g., django-rest-framework or FastAPI).",
+      "Learn and apply Cloud AI deployment (AWS/GCP Vertex AI).",
+      "Obtain an industry-recognized cloud AI or professional Python certification."
+    ]
+  }
+}

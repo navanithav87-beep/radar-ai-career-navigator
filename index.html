@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opportunity Radar AI | Career Growth Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">▲</div>
+        <div class="logo-text">Radar<span>AI</span></div>
+      </div>
+      <nav class="sidebar-menu">
+        <button class="menu-btn active" data-target="dashboard-panel">
+          <span class="icon">📊</span> Dashboard
+        </button>
+        <button class="menu-btn" data-target="opportunities-panel">
+          <span class="icon">🚀</span> Opportunities
+        </button>
+        <button class="menu-btn" data-target="skills-panel">
+          <span class="icon">🎯</span> Skill Gaps
+        </button>
+        <button class="menu-btn" data-target="planner-panel">
+          <span class="icon">🗓️</span> Action Planner
+        </button>
+        <button class="menu-btn" data-target="decision-panel">
+          <span class="icon">⚖️</span> Decision Assistant
+        </button>
+        <button class="menu-btn" data-target="profile-panel">
+          <span class="icon">👤</span> Profile
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-badge">
+          <div class="avatar">N</div>
+          <div class="user-info">
+            <span class="name">Navanitha</span>
+            <span class="status-dot">Online</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <header class="top-bar">
+        <h1 id="panel-title">Dashboard Overview</h1>
+        <div class="header-actions">
+          <div class="radar-score-badge">
+            <span class="score-label">Growth Index:</span>
+            <span class="score-value" id="header-growth-score">82%</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Panel Content Container -->
+      <div class="panel-container">
+        
+        <!-- DASHBOARD PANEL -->
+        <section id="dashboard-panel" class="panel active">
+          <!-- Overview Cards -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon-wrapper blue">💼</div>
+              <div class="stat-data">
+                <span class="stat-title">Target Role</span>
+                <span class="stat-value text-glow-blue" style="font-size: 1.15rem; font-weight: 700;">Full-Stack AI Engineer</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon-wrapper purple">🌟</div>
+              <div class="stat-data">
+                <span class="stat-title">Active Opportunities</span>
+                <span class="stat-value text-glow-purple" id="stat-active-opps">5</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon-wrapper green">📈</div>
+              <div class="stat-data">
+                <span class="stat-title">Skills Tracked</span>
+                <span class="stat-value text-glow-green" id="stat-skills-tracked">13</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon-wrapper red">⌛</div>
+              <div class="stat-data">
+                <span class="stat-title">Immediate Deadlines</span>
+                <span class="stat-value text-glow-red" id="stat-deadlines">2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mid Section -->
+          <div class="mid-grid">
+            <!-- Strategic Radar Summary -->
+            <div class="content-card double-width">
+              <div class="card-header">
+                <h2>Top Recommended Next Steps</h2>
+                <span class="badge badge-accent">Highest ROI</span>
+              </div>
+              <div class="opportunity-preview-list" id="dashboard-top-opportunities">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+
+            <!-- Deadline Guardian Section -->
+            <div class="content-card">
+              <div class="card-header">
+                <h2>Deadline Guardian</h2>
+                <span class="icon">🚨</span>
+              </div>
+              <div class="deadline-list" id="dashboard-deadlines">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Planner Preview -->
+          <div class="content-card">
+            <div class="card-header">
+              <h2>Weekly Goals Checklist</h2>
+              <button class="btn btn-secondary btn-sm" onclick="app.showPanel('planner-panel')">Manage Planner</button>
+            </div>
+            <div class="dashboard-planner-preview" id="dashboard-weekly-preview">
+              <!-- Checklist of current weekly tasks -->
+            </div>
+          </div>
+        </section>
+
+        <!-- OPPORTUNITIES PANEL -->
+        <section id="opportunities-panel" class="panel">
+          <div class="panel-header-actions">
+            <div class="filters-bar">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="Portfolio Project">Projects</button>
+              <button class="filter-btn" data-filter="Certification">Certifications</button>
+              <button class="filter-btn" data-filter="Hackathon">Hackathons</button>
+            </div>
+            <button class="btn btn-primary" id="open-add-opp-modal">+ Add Opportunity</button>
+          </div>
+          
+          <div class="opportunities-table-container">
+            <table class="opps-table">
+              <thead>
+                <tr>
+                  <th>Opportunity</th>
+                  <th>Type</th>
+                  <th>Difficulty</th>
+                  <th>Hours</th>
+                  <th>ROI Score</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="opportunities-tbody">
+                <!-- Injected via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- SKILL GAPS PANEL -->
+        <section id="skills-panel" class="panel">
+          <div class="skills-grid">
+            <!-- Radar Visualization -->
+            <div class="content-card flex-center">
+              <div class="card-header width-100">
+                <h2>Role Alignment Radar</h2>
+                <select id="skills-role-selector" class="dropdown">
+                  <option value="Full-Stack AI Engineer">Target: Full-Stack AI Engineer</option>
+                  <option value="MLOps Specialist">Target: MLOps Specialist</option>
+                </select>
+              </div>
+              <div class="chart-container">
+                <svg id="radar-chart-svg" viewBox="0 0 300 300"></svg>
+              </div>
+              <div class="radar-legend">
+                <span class="legend-item"><span class="legend-dot user-dot"></span> Current Profile</span>
+                <span class="legend-item"><span class="legend-dot target-dot"></span> Target Role</span>
+              </div>
+            </div>
+
+            <!-- Skill Gap Details -->
+            <div class="content-card">
+              <div class="card-header">
+                <h2>Detailed Skill Gaps</h2>
+              </div>
+              <div class="skills-gap-list" id="skills-gap-container">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACTION PLANNER PANEL -->
+        <section id="planner-panel" class="panel">
+          <div class="planner-header">
+            <h2>Weekly Task Board</h2>
+            <button class="btn btn-primary" id="add-task-btn">+ New Task</button>
+          </div>
+          <div class="kanban-board">
+            <div class="kanban-column" id="col-todo">
+              <div class="column-header">
+                <h3>To Do</h3>
+                <span class="task-count" id="count-todo">0</span>
+              </div>
+              <div class="kanban-cards" id="cards-todo"></div>
+            </div>
+            <div class="kanban-column" id="col-progress">
+              <div class="column-header">
+                <h3>In Progress</h3>
+                <span class="task-count" id="count-progress">0</span>
+              </div>
+              <div class="kanban-cards" id="cards-progress"></div>
+            </div>
+            <div class="kanban-column" id="col-done">
+              <div class="column-header">
+                <h3>Completed</h3>
+                <span class="task-count" id="count-done">0</span>
+              </div>
+              <div class="kanban-cards" id="cards-done"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DECISION ASSISTANT PANEL -->
+        <section id="decision-panel" class="panel">
+          <div class="content-card max-width-800">
+            <div class="card-header">
+              <h2>Trade-off Comparison Assistant</h2>
+            </div>
+            <p class="description-text">Select any two opportunities to run our Decision Engine. It will analyze skill acquisition, timeline pressure, effort, and financial returns to make an optimal selection.</p>
+            
+            <div class="decision-selectors">
+              <div class="select-group">
+                <label for="compare-opp-a">Opportunity A</label>
+                <select id="compare-opp-a" class="dropdown"></select>
+              </div>
+              <div class="select-group">
+                <label for="compare-opp-b">Opportunity B</label>
+                <select id="compare-opp-b" class="dropdown"></select>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary width-100 mt-20" id="compare-btn">Compare Opportunities</button>
+
+            <!-- Comparison Results -->
+            <div id="comparison-result" class="comparison-result-card hidden">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- PROFILE PANEL -->
+        <section id="profile-panel" class="panel">
+          <div class="profile-grid">
+            <div class="content-card">
+              <div class="card-header">
+                <h2>Interactive Profile Details</h2>
+              </div>
+              <div class="profile-details-form">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" id="prof-name" class="form-control" value="Navanitha">
+                </div>
+                <div class="form-group">
+                  <label>Current Status</label>
+                  <input type="text" id="prof-role" class="form-control" value="Python & Django Developer / Emerging ML Engineer">
+                </div>
+                <div class="form-group">
+                  <label>Core Skills (Comma separated)</label>
+                  <textarea id="prof-skills" class="form-control" rows="4">Python, SQL, Django, scikit-learn, scikit-image (HOG), PIL (Pillow), Support Vector Machines (SVM), SQLite, Git, Pip, Dotenv</textarea>
+                </div>
+                <button class="btn btn-primary" id="save-profile-btn">Save Profile Changes</button>
+              </div>
+            </div>
+
+            <div class="content-card">
+              <div class="card-header">
+                <h2>Existing Projects</h2>
+              </div>
+              <div class="project-list" id="profile-projects-list">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ADD OPPORTUNITY MODAL -->
+  <div class="modal-overlay hidden" id="add-opp-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Add New Career Opportunity</h3>
+        <button class="close-btn" id="close-add-opp-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="add-opp-form">
+          <div class="form-group">
+            <label for="opp-title">Opportunity Title</label>
+            <input type="text" id="opp-title" class="form-control" required placeholder="e.g., FastAPI Backend Internship">
+          </div>
+          <div class="form-group">
+            <label for="opp-type">Category Type</label>
+            <select id="opp-type" class="form-control">
+              <option value="Portfolio Project">Portfolio Project</option>
+              <option value="Certification">Certification</option>
+              <option value="Hackathon">Hackathon</option>
+              <option value="Job">Job Opportunity</option>
+            </select>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="opp-skill">Skill Development (1-10)</label>
+              <input type="number" id="opp-skill" class="form-control" min="1" max="10" value="8" required>
+            </div>
+            <div class="form-group">
+              <label for="opp-impact">Career Impact (1-10)</label>
+              <input type="number" id="opp-impact" class="form-control" min="1" max="10" value="8" required>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="opp-net">Networking Value (1-10)</label>
+              <input type="number" id="opp-net" class="form-control" min="1" max="10" value="7" required>
+            </div>
+            <div class="form-group">
+              <label for="opp-fin">Financial Benefit (1-10)</label>
+              <input type="number" id="opp-fin" class="form-control" min="1" max="10" value="7" required>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="opp-diff">Difficulty (1-10)</label>
+              <input type="number" id="opp-diff" class="form-control" min="1" max="10" value="6" required>
+            </div>
+            <div class="form-group">
+              <label for="opp-hours">Time Commitment (Hours)</label>
+              <input type="number" id="opp-hours" class="form-control" min="1" value="40" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="opp-desc">Short Description</label>
+            <textarea id="opp-desc" class="form-control" rows="3" placeholder="Brief outline of the opportunity..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary width-100">Calculate ROI & Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD TASK MODAL -->
+  <div class="modal-overlay hidden" id="add-task-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Add New Action Item</h3>
+        <button class="close-btn" id="close-add-task-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="add-task-form">
+          <div class="form-group">
+            <label for="task-title">Task Description</label>
+            <input type="text" id="task-title" class="form-control" required placeholder="e.g., Write Dockerfile for Image Classifier">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="task-duration">Estimated Hours</label>
+              <input type="number" id="task-duration" class="form-control" min="1" value="4" required>
+            </div>
+            <div class="form-group">
+              <label for="task-deadline">Target Deadline</label>
+              <input type="date" id="task-deadline" class="form-control" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary width-100">Create Task</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
