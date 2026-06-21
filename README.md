@@ -1,5 +1,7 @@
 # Radar AI Career Navigator 🚀
 
+![Radar AI Dashboard Screenshot](dashboard_screenshot.png)
+
 An autonomous, data-driven career strategist and opportunity tracker designed to maximize long-term career growth, learning potential, income, and professional visibility. 
 
 Radar AI Career Navigator bridges the gap between your active development projects and target industry roles by analyzing skill gaps, calculating dynamic ROI scores for career actions, and organizing daily tasks in an interactive, responsive glassmorphic dashboard.
